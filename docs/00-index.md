@@ -13,7 +13,7 @@
 |------|------|---------|
 | [cursor-cloud-agent-design.md](cursor-cloud-agent-design.md) | 系统总览设计（23章全景） | 1600 |
 
-### 分模块详细设计
+### 分模块详细设计 (第一批: 基础模块)
 
 | 编号 | 文档 | 模块 | 关键内容 |
 |------|------|------|---------|
@@ -29,6 +29,19 @@
 | 10 | [10-git-integration.md](10-git-integration.md) | Git 集成 | 操作权限、提交策略、分支管理、GitHub CLI、PR 自动化、冲突处理 |
 | 11 | [11-testing-debugging-workflow.md](11-testing-debugging-workflow.md) | 测试与调试工作流 | 测试策略引擎、变更分析、证据收集、迭代控制、调试插桩 |
 | 12 | [12-security-design.md](12-security-design.md) | 安全体系 | 威胁模型、沙箱隔离、输入/输出安全、权限控制、审计日志 |
+
+### 分模块详细设计 (第二批: 深化模块)
+
+| 编号 | 文档 | 模块 | 关键内容 |
+|------|------|------|---------|
+| 13 | [13-core-e2e-flows.md](13-core-e2e-flows.md) | 核心端到端流程 | 任务全生命周期时序(T0-T11)、跟进消息流程、工具调用时序、错误恢复4级、手动测试+录屏全流程、Bug 修复全流程、超时层级表 |
+| 14 | [14-prompt-engineering.md](14-prompt-engineering.md) | Prompt 工程 | 系统提示词10层架构、User Message 注入结构、行为规则完整定义、Skill 系统、AGENTS.md 集成、系统提醒机制、上下文压缩策略 |
+| 15 | [15-api-websocket-protocol.md](15-api-websocket-protocol.md) | API 与 WebSocket 协议 | 完整 REST API (5大资源)、WebSocket 20种事件类型、认证 JWT 流程、错误码体系、速率限制 |
+| 16 | [16-database-schema.md](16-database-schema.md) | 数据库 Schema | 11张核心表 SQL DDL、索引策略、Redis 数据结构、ER 图、高频/分析查询模式、数据生命周期管理 |
+| 17 | [17-deployment-operations.md](17-deployment-operations.md) | 部署与运维 | 生产架构图、10个微服务拆分、K8s 资源定义、监控栈(Prometheus+Loki+Jaeger)、告警规则、CI/CD 管线、灾备策略 |
+| 18 | [18-env-setup-deep-dive.md](18-env-setup-deep-dive.md) | 环境设置深度 | 并行发现4任务编排、TODO生成逻辑、运行时版本管理、包管理器选择、Update Script 设计哲学、Hello World 任务完整设计、各类项目处理策略 |
+| 19 | [19-computer-use-protocol.md](19-computer-use-protocol.md) | Computer Use 协议 | 操作原语完整定义、坐标系统、视觉感知循环、Chrome 管理、智能等待策略、主代理协作协议、错误恢复、录屏协调 |
+| 20 | [20-billing-quota.md](20-billing-quota.md) | 计费与配额 | 成本构成分析、4级套餐设计、按量计费定价、配额检查流程、使用量追踪、仪表盘 API、成本优化策略 |
 
 ---
 
