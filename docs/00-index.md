@@ -98,7 +98,31 @@
 | 监控 | Prometheus + Grafana |
 | 日志 | ELK / Loki |
 
+### 分模块详细设计 (第三批: 工程化模块)
+
+| 编号 | 文档 | 模块 | 关键内容 |
+|------|------|------|---------|
+| 21 | [21-agent-decision-engine.md](21-agent-decision-engine.md) | Agent 决策引擎 | 4层决策模型、工具选择决策树、子代理启动矩阵、测试充分性判断、代码修改/注释/Git/产物/回复格式决策规则、错误后策略调整 |
+| 22 | [22-multi-tenancy.md](22-multi-tenancy.md) | 多租户架构 | 组织/团队/用户3层模型、RBAC权限矩阵(15项操作×4角色)、RLS行级安全、4级数据隔离、配额分配 |
+| 23 | [23-event-driven-architecture.md](23-event-driven-architecture.md) | 事件驱动架构 | 30+事件类型目录、Redis Streams 实现、事件路由表、WebSocket分发流程、事件持久化、副作用处理器 |
+| 24 | [24-caching-performance.md](24-caching-performance.md) | 缓存与性能 | 4级缓存架构(进程→Redis→CDN→DB)、Prompt缓存(省90%系统提示token)、VM预热池、增量快照、数据库索引优化、性能基准SLA |
+| 25 | [25-implementation-roadmap.md](25-implementation-roadmap.md) | 实现路线图 | 4阶段路线(PoC→MVP→V1→V2)、MVP代码骨架、每阶段交付物清单+工时估计、团队配置建议(1人→15人)、6项技术风险与缓解 |
+| 26 | [26-sdk-integration.md](26-sdk-integration.md) | SDK与集成 | TypeScript/Python SDK完整API、CLI工具设计、Webhook事件+签名验证、GitHub Actions/GitLab CI集成、VS Code扩展接口、MCP自定义服务器 |
+| 27 | [27-edge-cases-error-catalog.md](27-edge-cases-error-catalog.md) | 边界场景目录 | 10大类100+边界场景完整枚举：Agent行为(死循环/token耗尽)、文件系统、Shell、子代理、VM、认证、Git、网络、UI、计费 |
+
 ---
 
-*文档版本: 1.0*
+## 文档统计
+
+| 批次 | 文档数 | 总行数 | 侧重 |
+|------|--------|--------|------|
+| 总览 | 1 | ~1600 | 全景架构 |
+| 第一批 (01-12) | 12 | ~7000 | 核心模块设计 |
+| 第二批 (13-20) | 8 | ~4000 | 流程/协议/部署深化 |
+| 第三批 (21-27) | 7 | ~3500 | 决策引擎/工程化/路线图 |
+| **合计** | **28** | **~16,000** | **端到端产品设计** |
+
+---
+
+*文档版本: 2.0*
 *生成日期: 2026-03-03*
